@@ -8,12 +8,11 @@
 
 var myName = "You";
 var myDragon = "Synethra";
-var myGroup = 4;
 var celebrationTime = "Hell Yea We got the loots!";
 var myPrompt = prompt("Before your group faces " + myDragon + " Choose bow or sword? Enter Here");
-var myConfirm = confirm("Did your group fully rebuff before you enter into " + myDragon + "\'s Lair?");
+var myConfirm = confirm("Does your group need buffs before you enter into " + myDragon + "\'s Lair?");
 var health = 150;
-
+var myGroup = 4;
 console.log(myName + " arrive at the lair far earlier then your group!")
 
 
@@ -37,37 +36,63 @@ myConfirm;
 
 
 // Boolean Function
-var booleanFunction = function(buffUp){
-     var myBuffs = 4;
-        while (myBuffs > 0); {
-            console.log("A group member throws a buff on you! hooray!");
-        myBuffs--;
-    }
-            console.log("Your group is now ready to move forward!");
-            
-    return true;
-};   
+var booleanFunction = function(h){
+    if (h === true) {
+        console.log("We need buffs!");
+    } else
+    console.log("We are ready for battle!");
+    return h;
+    };
+    
+returnBoolean = booleanFunction(myConfirm);
 
-booleanFunction();
-
-console.log(booleanFunction);
-
-
-
+console.log("You launch your layed out strategy against the beast!");
 // Number Function
 
-var battle = function (health) {
-    for (var h = health; h > 0; h = h - 15) {
+var battle = function (hitpoints) {
+    for (var h = hitpoints; h > 0; h = h - 15) {
         
-       console.log("The dragon has " + h);
+       console.log("The dragon has " + h + " left!");
         console.log("You hit the dragon for 15 points of damage!");
         };
         
 return h;
     
 };
-    console.log(myDragon + " Falls to her face!")
 
-battle(health);
+dragonHealth = battle(health);
+
+console.log(myDragon + " Falls to her face! Because she has " + dragonHealth + " health left!")
+
 
 // String Function
+
+
+var goSeperateWays = function() {
+    splitUp = prompt("Would you Like to go home now or wait a bit?")
+    
+    if (splitUp === "go home") {
+    console.log("The adventurers take their loot and " + splitUp + " to their homelands.");
+    }
+    else {
+    console.log("The adventurers " + splitUp + " to chat and then go to their homelands.");
+        
+    }
+    
+    return(splitUp); 
+};
+
+var partyDisband = goSeperateWays();
+
+
+
+
+
+
+
+
+
+
+
+
+

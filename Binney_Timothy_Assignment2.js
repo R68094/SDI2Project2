@@ -8,11 +8,11 @@
 
 var myName = "You";
 var myDragon = "Synethra";
-var celebrationTime = "Hell Yea We got the loots!";
 var myPrompt;
 var myConfirm;
 var health = 150;
 var myGroup = 4;
+var myClassPrompt;
 
 // initial output
 console.log(myName + " arrive at the lair far earlier then your group!")
@@ -21,16 +21,19 @@ console.log(myName + " arrive at the lair far earlier then your group!")
 
 
 // Prompt
+myClassPrompt = prompt("What Class are you Warrior or Archer? Enter Here");
+
 myPrompt = prompt("Before your group faces " + myDragon + " Choose bow or sword? Enter Here");
 
 
 // Procedure
-if (myGroup === 4 && myPrompt === "bow") {
+if (myClassPrompt === "archer" && myPrompt === "bow") {
     console.log(myName + " and your group prepare a ranged strategy to fight " + myDragon + " !");
 }   else  {
-    if (myGroup === 4 ) {
-    boobies
-    }
+    console.log(myName + " and your group prepare a full on brute force strategy to fight " + myDragon + " !");
+    if (myPrompt === "sword" || myClassPrompt === "warrior") {
+    
+    } else
         console.log(myName + " and your group prepare a full on brute force strategy to fight " + myDragon + " !");
 };
 

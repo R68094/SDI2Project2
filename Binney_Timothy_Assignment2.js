@@ -9,42 +9,53 @@
 var myName = "You";
 var myDragon = "Synethra";
 var celebrationTime = "Hell Yea We got the loots!";
-var myPrompt = prompt("Before your group faces " + myDragon + " Choose bow or sword? Enter Here");
-var myConfirm = confirm("Does your group need buffs before you enter into " + myDragon + "\'s Lair?");
+var myPrompt;
+var myConfirm;
 var health = 150;
 var myGroup = 4;
+
+// initial output
 console.log(myName + " arrive at the lair far earlier then your group!")
 
 
 
 
 // Prompt
-myPrompt;
+myPrompt = prompt("Before your group faces " + myDragon + " Choose bow or sword? Enter Here");
 
 
 // Procedure
-if (myPrompt === "bow") {
+if (myGroup === 4 && myPrompt === "bow") {
     console.log(myName + " and your group prepare a ranged strategy to fight " + myDragon + " !");
 }   else  {
+    if (myGroup === 4 ) {
+    boobies
+    }
         console.log(myName + " and your group prepare a full on brute force strategy to fight " + myDragon + " !");
 };
 
 
 // Confirm
 
-myConfirm;
+myConfirm  = confirm("Does your group need buffs before you enter into " + myDragon + "\'s Lair?");
 
 
 // Boolean Function
-var booleanFunction = function(h){
-    if (h === true) {
+var booleanFunction = function(buffs,people) {
+    if (buffs === true) {
         console.log("We need buffs!");
+        while (people > 0) {
+        console.log("A group member throws out a buff");
+        people--;
+            }
     } else
-    console.log("We are ready for battle!");
-    return h;
+        console.log("All buffs are out!");
+    
+    return(buffs);
+
     };
     
-returnBoolean = booleanFunction(myConfirm);
+returnBoolean = booleanFunction(myConfirm,myGroup);
 
 console.log("You launch your layed out strategy against the beast!");
 // Number Function
@@ -69,7 +80,7 @@ console.log(myDragon + " Falls to her face! Because she has " + dragonHealth + "
 
 
 var goSeperateWays = function() {
-    splitUp = prompt("Would you Like to go home now or wait a bit?")
+    var splitUp = prompt("Would you Like to go home now or wait a bit?")
     
     if (splitUp === "go home") {
     console.log("The adventurers take their loot and " + splitUp + " to their homelands.");
@@ -83,9 +94,6 @@ var goSeperateWays = function() {
 };
 
 var partyDisband = goSeperateWays();
-
-
-
 
 
 
